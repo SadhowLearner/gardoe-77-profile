@@ -11,10 +11,6 @@
   font-weight: normal;
 } */
 
-#app {
-  @apply bg-white work-sans;
-}
-
 /* font */
 
 .playfair-display {
@@ -27,6 +23,36 @@
   font-family: 'Work Sans', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+p {
+  font-family: 'Work Sans', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  @apply text-accent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  @apply text-brown-primary;
+}
+
+h1,
+h2 {
+  @apply font-bold;
+}
+
+h3 {
+  @apply font-semibold;
 }
 
 /* a, */
@@ -91,6 +117,8 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-brown-secondary: #cc7e3e;
+  --color-brown-primary: #321910;
 }
 
 :root {
@@ -107,7 +135,7 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --accent: #404040;
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);

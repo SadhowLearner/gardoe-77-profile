@@ -5,12 +5,13 @@ import Navbar from './components/Navbar.vue'
 import { Button } from './components/ui/button'
 
 import { ArrowUpRight, Menu } from 'lucide-vue-next'
-import HeroSection from './components/sections/hero/HeroSection.vue'
+import HeroSection from '@/components/sections/hero/HeroSection.vue'
+import ProfileSection from './components/sections/profile/ProfileSection.vue'
 </script>
 
 <template>
   <header
-    class="w-full max-h-[16vh] h-[16vh] bg-[#FFFAFA] text-[#31190F] flex justify-between work-sans"
+    class="w-full max-h-[20vh] h-[18vh] bg-[#FFFAFA] text-[#31190F] flex justify-between work-sans"
   >
     <div class="w-1/5">
       <Button variant="outline" class="m-5! size-10">
@@ -24,5 +25,8 @@ import HeroSection from './components/sections/hero/HeroSection.vue'
   </header>
   <main>
     <HeroSection />
+    <div class="px-20">
+      <ProfileSection />
+    </div>
   </main>
 </template>

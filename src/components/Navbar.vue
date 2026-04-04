@@ -16,7 +16,7 @@ import gardoe77 from '@assets/images/gardoe77.png'
 
 <template>
   <NavigationMenu class="w-3/5 bg-[#FFFAFA]">
-    <NavigationMenuList class="flex gap-14 items-baseline pb-16">
+    <NavigationMenuList class="flex gap-14 items-baseline pb-8">
       <NavigationMenuItem>
         <NavigationMenuLink as-child :class="navigationMenuTriggerStyle">
           <a href="/">Profil Kami</a>
@@ -28,7 +28,7 @@ import gardoe77 from '@assets/images/gardoe77.png'
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <img :src="gardoe77" alt="" class="w-26.5 translate-y-4" />
+        <img :src="gardoe77" alt="" class="w-24.5 translate-y-4" />
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuLink as-child :class="navigationMenuTriggerStyle">
