@@ -30,12 +30,14 @@
       </div>
       <StatsHighlight />
     </div>
+    <FacilityHighlight />
   </section>
 </template>
 
 <script setup lang="ts">
 import profileImg from '@/assets/images/sections/profile.png'
 import StatsHighlight from './StatsHighlight.vue'
+import FacilityHighlight from './FacilityHighlight.vue'
 </script>
 
 <style scoped></style>
