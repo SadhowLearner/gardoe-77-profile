@@ -1,30 +1,24 @@
 <template>
   <section
-    class="absolute w-3xl rounded-[28px] bottom-0 translate-y-26.5 border bg-[#FDFDFD] drop-shadow-xl shadow-black px-8 py-6 md:px-14 md:py-8"
+    class="absolute w-176 rounded-[28px] bg-accent bottom-0 drop-shadow-xl shadow-black px-8 py-6 md:px-10 md:py-8"
   >
-    <div class="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-12">
+    <div class="grid grid-cols-1 gap-8 text-center bg-accent md:grid-cols-3 md:gap-12">
       <div>
-        <h4 class="text-[#CC7E3E]! pb-3 text-[2rem] leading-none">10+</h4>
-        <p class="text-accent mt-3 text-lg leading-[1.8]">Pilihan menu favorit enak dan beragam</p>
+        <h3 class="text-[2rem] pb-1 leading-none">10+</h3>
+        <p class="text-lg leading-[1.8]">Pilihan menu enak</p>
       </div>
 
       <div>
-        <h4 class="text-[#CC7E3E]! pb-3 text-[2rem] leading-none">250+</h4>
-        <p class="text-accent mt-3 text-lg leading-[1.8]">
-          Pengunjung happy,
-          <br />
-          nyaman, dan puas
-        </p>
+        <h3 class="text-[2rem] pb-1 leading-none">250+</h3>
+        <p class="text-lg leading-[1.8]">Pengunjung happy</p>
       </div>
 
       <div>
-        <h4 class="text-[#CC7E3E]! pb-3 text-[2rem] leading-none">1</h4>
-        <p class="text-accent mt-3 text-lg leading-[1.8]">
-          Spot ngopi dengan
-          <br />
-          view kereta api
-        </p>
+        <h3 class="text-[2rem] pb-1 leading-none">1</h3>
+        <p class="text-lg leading-[1.8]">Spot view kereta api</p>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped></style>

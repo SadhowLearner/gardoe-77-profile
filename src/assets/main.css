@@ -13,48 +13,6 @@
 
 /* font */
 
-.playfair-display {
-  font-family: 'Playfair Display', serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-.work-sans {
-  font-family: 'Work Sans', sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-p {
-  font-family: 'Work Sans', serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-
-  @apply text-accent;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Playfair Display', sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-
-  @apply text-brown-primary;
-}
-
-h1,
-h2 {
-  @apply font-bold;
-}
-
-h3 {
-  @apply font-semibold;
-}
-
 /* a, */
 /* .green {
   text-decoration: none;
@@ -123,16 +81,16 @@ h3 {
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
+  --background: #010101;
+  --foreground: #fdfdfd;
+  --card: #ffffff1a;
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --primary: #cc7e3e;
+  --primary-foreground: #cc7e3e;
+  --secondary: #321019;
+  --secondary-foreground: #321019;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: #404040;
@@ -158,9 +116,66 @@ h3 {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50  text-foreground;
   }
   body {
     @apply bg-background text-foreground;
   }
+
+  #app {
+    @apply bg-background;
+  }
+}
+
+.playfair-display {
+  font-family: 'Playfair Display', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.work-sans {
+  font-family: 'Work Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+p {
+  font-family: 'Work Sans', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  @apply text-lg font-light leading-10 text-accent-foreground!;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-family: 'Playfair Display', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  @apply text-primary;
+}
+
+h1,
+h2 {
+  @apply font-bold;
+}
+
+h3 {
+  @apply font-semibold;
+}
+
+h4 {
+  font-family: 'Work Sans', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  @apply text-lg;
+}
+
+h5 {
+  @apply text-lg;
 }

@@ -19,7 +19,7 @@ import hero from '@/assets/images/sections/hero.png'
       <!-- Top Info Bar -->
       <div class="flex justify-center px-4">
         <p
-          class="bg-[#31190F]/90 w-full py-3 text-center text-xl font-medium text-white! shadow-lg backdrop-blur-sm md:text-base"
+          class="bg-[#31190F]/90 w-full py-3 text-center text-xl font-medium shadow-lg backdrop-blur-sm md:text-base"
         >
           Buka Setiap Hari, Senin–Jum’at 08.00–23.00 • Sabtu–Minggu 07.00–23.00
         </p>
