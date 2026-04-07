@@ -10,6 +10,7 @@ import ProfileSection from './components/sections/profile/ProfileSection.vue'
 import FeaturedMenuSection from '@/components/sections/menu/FeaturedMenuSection.vue'
 import FavoriteMenuSection from './components/sections/menu/FavoriteMenuSection.vue'
 import ReservationSection from './components/sections/reservation/ReservationSection.vue'
+import GallerySection from './components/sections/gallery/GallerySection.vue'
 </script>
 
 <template>
@@ -31,5 +32,6 @@ import ReservationSection from './components/sections/reservation/ReservationSec
     <FeaturedMenuSection />
     <FavoriteMenuSection />
     <ReservationSection />
+    <GallerySection />
   </main>
 </template>

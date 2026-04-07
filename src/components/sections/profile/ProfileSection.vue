@@ -7,8 +7,8 @@
         Bukan sekadar tempat ngopi, tapi ruang untuk cerita, tawa, dan momen yang ingin diulang.
       </h4>
     </div>
-    <div class="grid grid-cols-2 gap-15">
-      <div class="flex justify-start flex-col gap-y-17.5 col-span-1 w-138.25 h-83.25">
+    <div class="grid grid-cols-2 gap-x-15">
+      <div class="flex flex-col justify-end mt-auto gap-y-17.5 col-span-1 w-138.25 h-83.25">
         <div>
           <h3 class="text-3xl mb-6.75">Tempat Nongkrong yang Kamu Cari</h3>
           <p class="text-lg leading-[180%]! mb-2">

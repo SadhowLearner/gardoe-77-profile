@@ -1,52 +1,45 @@
 <template>
-  <ScrollArea class="w-full pt-0! whitespace-nowrap rounded-2xl">
+  <div
+    ref="scrollRef"
+    class="overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing select-none pb-4 scrollbar-hide"
+    @mousedown="startDrag"
+    @mousemove="onDrag"
+    @mouseleave="stopDrag"
+    @mouseup="stopDrag"
+  >
     <div
-      ref="scrollRef"
-      class="overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing scroll-smooth select-none"
-      @mousedown="startDrag"
-      @mousemove="onDrag"
-      @mouseleave="stopDrag"
+      class="grid grid-rows-2 gap-8 w-max"
+      :style="{ gridTemplateColumns: `repeat(${loopMenu.length / 2}, 18.25rem)` }"
     >
-      <div class="grid grid-rows-2 grid-cols-6 gap-8 w-max pb-4">
-        <Card
-          v-for="item in menu"
-          :key="item.name"
-          class="p-4! bg-white/20 border-0 shrink-0 rounded-2xl"
-        >
-          <CardHeader class="relative w-full p-0">
-            <img
-              :src="item.image"
-              :alt="item.name"
-              class="object-content w-full"
-              draggable="false"
-            />
-          </CardHeader>
-
-          <CardContent class="space-y-2 p-0">
-            <div class="flex items-start">
-              <p class="text-xl! text-primary! font-medium! border-b border-white/50 flex-1 grow">
-                {{ item.name }}
-              </p>
-              <p class="text-xl! text-primary! font-medium! whitespace-nowrap">
-                {{ item.price }}
-              </p>
-            </div>
-
-            <p class="text-accent text-sm! font-light leading-relaxed">
-              {{ item.contents }}
+      <Card
+        v-for="(item, index) in loopMenu"
+        :key="`${item.name}-${index}`"
+        class="p-4! bg-white/20 border-0 shrink-0 rounded-2xl min-w-73"
+      >
+        <CardHeader class="relative w-full p-0">
+          <img :src="item.image" :alt="item.name" class="object-cover w-full" draggable="false" />
+        </CardHeader>
+        <CardContent class="space-y-2 p-0">
+          <div class="flex items-start">
+            <p class="text-xl! text-primary! font-medium! border-b border-white/50 flex-1 grow">
+              {{ item.name }}
             </p>
-          </CardContent>
-        </Card>
-      </div>
+            <p class="text-xl! text-primary! font-medium! whitespace-nowrap">
+              {{ item.price }}
+            </p>
+          </div>
+          <p class="text-accent text-sm! font-light leading-relaxed">
+            {{ item.contents }}
+          </p>
+        </CardContent>
+      </Card>
     </div>
-
-    <ScrollBar orientation="horizontal" />
-  </ScrollArea>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import { ScrollArea } from '@/components/ui/scroll-area'
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 
 const props = defineProps<{
   menu: {
@@ -57,40 +50,92 @@ const props = defineProps<{
   }[]
 }>()
 
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+// Duplikat 3x, pastikan jumlah item selalu genap untuk grid-rows-2
+const loopMenu = computed(() => {
+  const tripled = [...props.menu, ...props.menu, ...props.menu]
+  // Pastikan genap agar grid 2 baris rapi
+  return tripled.length % 2 === 0 ? tripled : [...tripled, tripled[0]]
+})
 
 const scrollRef = ref<HTMLElement | null>(null)
+let animationFrame: number
+let isDragging = false
 
-let isDown = false
+const SCROLL_SPEED = 0.5
+
+const autoScroll = () => {
+  if (!scrollRef.value || isDragging) {
+    animationFrame = requestAnimationFrame(autoScroll)
+    return
+  }
+
+  scrollRef.value.scrollLeft += SCROLL_SPEED
+
+  const totalWidth = scrollRef.value.scrollWidth
+  const oneThird = totalWidth / 3
+
+  if (scrollRef.value.scrollLeft >= oneThird * 2) {
+    scrollRef.value.scrollLeft -= oneThird
+  }
+
+  animationFrame = requestAnimationFrame(autoScroll)
+}
+
 let startX = 0
-let scrollLeft = 0
+let scrollLeftStart = 0
 
 const startDrag = (e: MouseEvent) => {
   if (!scrollRef.value) return
-
-  isDown = true
+  isDragging = true
   startX = e.pageX - scrollRef.value.offsetLeft
-  scrollLeft = scrollRef.value.scrollLeft
+  scrollLeftStart = scrollRef.value.scrollLeft
 }
 
 const stopDrag = () => {
-  isDown = false
+  isDragging = false
 }
 
 const onDrag = (e: MouseEvent) => {
-  if (!isDown || !scrollRef.value) return
-
+  if (!isDragging || !scrollRef.value) return
   e.preventDefault()
   const x = e.pageX - scrollRef.value.offsetLeft
-  const walk = (x - startX) * 1 // makin besar makin cepat
-  scrollRef.value.scrollLeft = scrollLeft - walk
+  const walk = (x - startX) * 1.2
+  scrollRef.value.scrollLeft = scrollLeftStart - walk
+
+  const totalWidth = scrollRef.value.scrollWidth
+  const oneThird = totalWidth / 3
+  if (scrollRef.value.scrollLeft < 0) {
+    scrollRef.value.scrollLeft += oneThird
+    scrollLeftStart += oneThird
+  } else if (scrollRef.value.scrollLeft >= oneThird * 2) {
+    scrollRef.value.scrollLeft -= oneThird
+    scrollLeftStart -= oneThird
+  }
 }
 
 onMounted(() => {
   window.addEventListener('mouseup', stopDrag)
+
+  if (scrollRef.value) {
+    const oneThird = scrollRef.value.scrollWidth / 3
+    scrollRef.value.scrollLeft = oneThird * 0.5
+  }
+
+  autoScroll()
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('mouseup', stopDrag)
+  cancelAnimationFrame(animationFrame)
 })
 </script>
+
+<style scoped>
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>
