@@ -41,20 +41,22 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 
+type menuItem = {
+  image: string
+  name: string
+  contents: string
+  price: string
+}
+
 const props = defineProps<{
-  menu: {
-    image: string
-    name: string
-    contents: string
-    price: string
-  }[]
+  menu: menuItem[]
 }>()
 
 // Duplikat 3x, pastikan jumlah item selalu genap untuk grid-rows-2
 const loopMenu = computed(() => {
   const tripled = [...props.menu, ...props.menu, ...props.menu]
   // Pastikan genap agar grid 2 baris rapi
-  return tripled.length % 2 === 0 ? tripled : [...tripled, tripled[0]]
+  return tripled.length % 2 === 0 ? tripled : [...tripled, tripled[0]!]
 })
 
 const scrollRef = ref<HTMLElement | null>(null)
