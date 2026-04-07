@@ -6,31 +6,31 @@
     </div>
 
     <div
-      class="col-span-1 text-center flex flex-col items-center border rounded-2xl border-accent-foreground py-12"
+      class="col-span-1 text-center flex flex-col items-center border rounded-2xl border-accent-foreground py-5 px-6.25"
     >
       <img :src="wifi" alt="" />
-      <h3 class="text-xl text-card! mt-2">High-Speed Wifi</h3>
+      <h3 class="text-xl text-foreground! mt-2">High-Speed Wifi</h3>
       <p>Internet gratis untuk semua</p>
     </div>
     <div
-      class="col-span-1 text-center flex flex-col items-center border rounded-2xl border-accent-foreground py-12"
+      class="col-span-1 text-center flex flex-col items-center border rounded-2xl border-accent-foreground py-5 px-6.25"
     >
       <img :src="motor" alt="" />
-      <h3 class="text-xl text-card! mt-2">Parking Area</h3>
+      <h3 class="text-xl text-foreground! mt-2">Parking Area</h3>
       <p class="max-w-xs">Stop kontak disetiap meja</p>
     </div>
     <div
-      class="col-span-1 text-center flex flex-col items-center border rounded-2xl border-accent-foreground py-12"
+      class="col-span-1 text-center flex flex-col items-center border rounded-2xl border-accent-foreground py-5 px-6.25"
     >
       <img :src="bulb" alt="" />
-      <h3 class="text-xl text-card! mt-2">Power Outlets</h3>
+      <h3 class="text-xl text-foreground! mt-2">Power Outlets</h3>
       <p>Parkiran Area Strategis</p>
     </div>
     <div
-      class="col-span-1 text-center flex flex-col items-center border rounded-2xl border-accent-foreground py-12"
+      class="col-span-1 text-center flex flex-col items-center border rounded-2xl border-accent-foreground py-5 px-6.25"
     >
       <img :src="music" alt="" />
-      <h3 class="text-xl text-card! mt-2">Chill Vibes</h3>
+      <h3 class="text-xl text-foreground! mt-2">Chill Vibes</h3>
       <p class="max-w-xs">Playlist yang pas untukmu</p>
     </div>
   </section>

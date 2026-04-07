@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24">
+  <section class="my-24">
     <div class="flex flex-col justify-center w-full items-center gap-7 mb-16!">
       <Badge> Profil Kami </Badge>
       <h2 class="text-5xl">Lebih Dari Sekedar Kedai kopi</h2>
@@ -7,24 +7,26 @@
         Bukan sekadar tempat ngopi, tapi ruang untuk cerita, tawa, dan momen yang ingin diulang.
       </h4>
     </div>
-    <div class="grid grid-cols-2 gap-10 relative">
-      <div class="flex flex-col gap-8 justify-start mt-24 col-span-1 max-w-2xl">
-        <h3 class="text-3xl">Tempat Nongkrong yang Kamu Cari</h3>
-        <p class="text-lg leading-10!">
-          Gardoe77 Pakisadji hadir sebagai ruang hangat untuk kamu yang ingin melepas penat, berbagi
-          cerita, atau sekadar menikmati waktu sendiri. Dengan suasana nyaman bernuansa vintage,
-          pemandangan kereta api yang melintas, tempat ini menawarkan pengalaman nongkrong yang
-          berbeda, unik, dan penuh cerita.
-        </p>
-        <p class="text-lg">
-          Secangkir kopi bukan hanya minuman, tapi teman setia untuk menikmati setiap momen,
-          termasuk saat melihat perjalanan kereta yang berlalu dengan suasana menenangkan.
-        </p>
+    <div class="grid grid-cols-2 gap-15">
+      <div class="flex justify-start flex-col gap-y-17.5 col-span-1 w-138.25 h-83.25">
+        <div>
+          <h3 class="text-3xl mb-6.75">Tempat Nongkrong yang Kamu Cari</h3>
+          <p class="text-lg leading-[180%]! mb-2">
+            Gardoe77 Pakisadji hadir sebagai ruang hangat untuk kamu yang ingin melepas penat,
+            berbagi cerita, atau sekadar menikmati waktu sendiri. Dengan suasana nyaman bernuansa
+            vintage, pemandangan kereta api yang melintas, tempat ini menawarkan pengalaman
+            nongkrong yang berbeda, unik, dan penuh cerita.
+          </p>
+          <p class="text-lg leading-[180%]!">
+            Secangkir kopi bukan hanya minuman, tapi teman setia untuk menikmati setiap momen,
+            termasuk saat melihat perjalanan kereta yang berlalu dengan suasana menenangkan.
+          </p>
+        </div>
+        <StatsHighlight />
       </div>
       <div class="col-span-1">
-        <img :src="profileImg" alt="" class="w-4xl" />
+        <img :src="profileImg" alt="" class="w-154 h-139" />
       </div>
-      <StatsHighlight />
     </div>
     <FacilityHighlight />
   </section>

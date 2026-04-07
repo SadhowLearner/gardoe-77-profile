@@ -70,10 +70,7 @@
       <img :src="menu7" alt="kopi hitam" class="col-span-1" />
       <MenuList :menu="menuItem10" class="col-span-1" />
     </TabsContent>
-    <TabsContent
-      value="snack"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-content-center"
-    >
+    <TabsContent value="snack" class="grid grid-cols-1 md:grid-cols-2 mt-15 place-content-center">
       <div class="col-span-1 flex flex-col items-center gap-9">
         <MenuList :menu="menuItem11" />
         <img :src="menu9" alt="kopi hitam" />

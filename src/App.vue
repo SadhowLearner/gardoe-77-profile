@@ -8,6 +8,7 @@ import { ArrowUpRight, Menu } from 'lucide-vue-next'
 import HeroSection from '@/components/sections/hero/HeroSection.vue'
 import ProfileSection from './components/sections/profile/ProfileSection.vue'
 import FeaturedMenuSection from '@/components/sections/menu/FeaturedMenuSection.vue'
+import FavoriteMenuSection from './components/sections/menu/FavoriteMenuSection.vue'
 </script>
 
 <template>
@@ -22,11 +23,11 @@ import FeaturedMenuSection from '@/components/sections/menu/FeaturedMenuSection.
       <Button variant="outline" class="m-3!"> Kontak <ArrowUpRight /> </Button>
     </div>
   </header> -->
-  <main class="px-20 flex flex-col gap-24">
+  <main class="px-20 flex flex-col gap-45">
     <!-- <HeroSection /> -->
 
     <ProfileSection />
     <FeaturedMenuSection />
-    <div class="h-[300vh] w-full" />
+    <FavoriteMenuSection />
   </main>
 </template>
