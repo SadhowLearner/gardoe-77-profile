@@ -11,6 +11,7 @@ import FeaturedMenuSection from '@/components/sections/menu/FeaturedMenuSection.
 import FavoriteMenuSection from './components/sections/menu/FavoriteMenuSection.vue'
 import ReservationSection from './components/sections/reservation/ReservationSection.vue'
 import GallerySection from './components/sections/gallery/GallerySection.vue'
+import TestimonialsSection from './components/sections/testimonials/TestimonialsSection.vue'
 </script>
 
 <template>
@@ -33,5 +34,6 @@ import GallerySection from './components/sections/gallery/GallerySection.vue'
     <FavoriteMenuSection />
     <ReservationSection />
     <GallerySection />
+    <TestimonialsSection />
   </main>
 </template>
