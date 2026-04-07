@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section class="px-20">
     <Badge> Menu Favorit </Badge>
     <h2 class="text-5xl mt-5 leading-16">
       Menu Andalan <br />
@@ -10,7 +10,7 @@
       bersantai.
     </h4>
     <CardMenu :menu="menu" />
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

@@ -1,39 +1,57 @@
 <template>
-  <div class="overflow-visible pt-12">
-    <div
-      ref="scrollRef"
-      class="overflow-x-auto overflow-y-auto cursor-grab active:cursor-grabbing select-none pb-4 scrollbar-hide"
-      @mousedown="startDrag"
-      @mousemove="onDrag"
-      @mouseleave="stopDrag"
-      @mouseup="stopDrag"
-    >
+  <div class="pt-12">
+    <!-- WRAPPER LUAR (AMAN DARI CLIP) -->
+    <div class="relative overflow-visible">
+      <!-- SCROLL AREA -->
       <div
-        class="grid grid-rows-1 gap-8 w-max"
-        :style="{ gridTemplateColumns: `repeat(${loopMenu.length}, 38.43rem)` }"
+        ref="scrollRef"
+        class="overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing select-none pb-8 scrollbar-hide"
+        @mousedown="startDrag"
+        @mousemove="onDrag"
+        @mouseleave="stopDrag"
+        @mouseup="stopDrag"
       >
-        <Card
-          v-for="(item, index) in loopMenu"
-          :key="`${item.name}-${index}`"
-          class="p-13! py-16 w-153.75 bg-[#FDFDFD] border-0 relative shrink-0 rounded-2xl min-w-152.75 overflow-visible!"
-        >
-          <img class="absolute left-1/2 -translate-x-1/2 -top-8" :src="testimoni" alt="Quote" />
-          <CardHeader class="w-full p-0">
-            <h4 class="font-normal! text-lg! text-[#522705]! text-center">
-              {{ item.testimoni }}
-            </h4>
-          </CardHeader>
-          <CardContent class="flex flex-col items-center p-0 gap-8">
-            <img :src="item.rating ?? rating" alt="Rating" />
-            <div class="flex gap-4">
-              <img :src="item.profile" :alt="item.name" class="w-14 h-13.5" />
-              <div>
-                <h5 class="work-sans! text-lg font-semibold! text-[#522705]!">{{ item.name }}</h5>
-                <p class="work-sans! text-base! font-light! text-[#522705]!">{{ item.title }}</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+        <div class="flex gap-8 w-max">
+          <div
+            v-for="(item, index) in loopMenu"
+            :key="`${item.name}-${index}`"
+            class="relative pt-12 shrink-0"
+          >
+            <!-- Icon Quote -->
+            <img
+              class="absolute left-1/2 top-0 -translate-x-1/2 translate-y-5 z-20"
+              :src="testimoni"
+              alt="Quote"
+            />
+
+            <!-- CARD -->
+            <Card
+              class="p-13! h-full py-16 w-153.75 bg-[#FDFDFD] border-0 rounded-2xl min-w-152.75"
+            >
+              <CardHeader class="w-full p-0">
+                <h4 class="font-normal! text-lg! text-[#522705]! text-center">
+                  {{ item.testimoni }}
+                </h4>
+              </CardHeader>
+
+              <CardContent class="flex flex-col items-center p-0 gap-8">
+                <img :src="item.rating ?? rating" alt="Rating" />
+
+                <div class="flex gap-4">
+                  <img :src="item.profile" :alt="item.name" class="w-14 h-13.5" />
+                  <div>
+                    <h5 class="work-sans! text-lg font-semibold! text-[#522705]!">
+                      {{ item.name }}
+                    </h5>
+                    <p class="work-sans! text-base! font-light! text-[#522705]!">
+                      {{ item.title }}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -55,10 +73,9 @@ const props = defineProps<{
   }[]
 }>()
 
-// Duplikat 3x, pastikan jumlah item selalu genap untuk grid-rows-2
+// LOOP DATA (tetap infinite)
 const loopMenu = computed(() => {
-  return [...props.testimoni, ...props.testimoni]
-  // Pastikan genap agar grid 2 baris rapi
+  return [...props.testimoni, ...props.testimoni, ...props.testimoni]
 })
 
 const scrollRef = ref<HTMLElement | null>(null)
@@ -102,12 +119,15 @@ const stopDrag = () => {
 const onDrag = (e: MouseEvent) => {
   if (!isDragging || !scrollRef.value) return
   e.preventDefault()
+
   const x = e.pageX - scrollRef.value.offsetLeft
   const walk = (x - startX) * 1.2
+
   scrollRef.value.scrollLeft = scrollLeftStart - walk
 
   const totalWidth = scrollRef.value.scrollWidth
   const oneThird = totalWidth / 3
+
   if (scrollRef.value.scrollLeft < 0) {
     scrollRef.value.scrollLeft += oneThird
     scrollLeftStart += oneThird
@@ -122,7 +142,7 @@ onMounted(() => {
 
   if (scrollRef.value) {
     const oneThird = scrollRef.value.scrollWidth / 3
-    scrollRef.value.scrollLeft = oneThird * 0.5
+    scrollRef.value.scrollLeft = oneThird
   }
 
   autoScroll()

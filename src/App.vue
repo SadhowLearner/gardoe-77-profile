@@ -12,28 +12,20 @@ import FavoriteMenuSection from './components/sections/menu/FavoriteMenuSection.
 import ReservationSection from './components/sections/reservation/ReservationSection.vue'
 import GallerySection from './components/sections/gallery/GallerySection.vue'
 import TestimonialsSection from './components/sections/testimonials/TestimonialsSection.vue'
+import ContactSection from './components/sections/contact/ContactSection.vue'
+import FooterSection from './components/sections/footer/FooterSection.vue'
 </script>
 
 <template>
-  <!-- <header class="w-full max-h-[20vh] h-[18vh] flex justify-between work-sans">
-    <div class="w-1/5">
-      <Button variant="outline" class="m-5! size-10">
-        <Menu class="size-8" />
-      </Button>
-    </div>
-    <Navbar />
-    <div class="flex justify-end w-1/5">
-      <Button variant="outline" class="m-3!"> Kontak <ArrowUpRight /> </Button>
-    </div>
-  </header> -->
-  <main class="px-20 flex flex-col gap-45">
-    <!-- <HeroSection /> -->
-
+  <main class="flex flex-col gap-45 pb-22.5">
+    <HeroSection />
     <ProfileSection />
     <FeaturedMenuSection />
     <FavoriteMenuSection />
     <ReservationSection />
     <GallerySection />
     <TestimonialsSection />
+    <ContactSection />
   </main>
+  <FooterSection />
 </template>

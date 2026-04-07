@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="flex flex-col justify-center w-full items-center gap-7 mb-16!">
+    <div class="flex flex-col justify-center w-full items-center gap-7 mb-16! px-20">
       <Badge> Apa Kata Mereka </Badge>
       <h2 class="text-5xl">Gardoe & Pelanggan</h2>
       <h4>

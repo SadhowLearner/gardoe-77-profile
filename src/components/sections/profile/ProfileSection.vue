@@ -1,5 +1,5 @@
 <template>
-  <section class="my-24">
+  <section id="profil" class="my-24 px-20">
     <div class="flex flex-col justify-center w-full items-center gap-7 mb-16!">
       <Badge> Profil Kami </Badge>
       <h2 class="text-5xl">Lebih Dari Sekedar Kedai kopi</h2>

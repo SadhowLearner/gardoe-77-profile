@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="pemesanan" class="px-20">
     <div class="w-full flex flex-col gap-5">
       <Badge> Pemesanan </Badge>
       <div class="flex w-full items-end justify-between gap-x-28.5">

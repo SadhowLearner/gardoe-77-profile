@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="px-20">
     <div class="flex flex-col gap-5 items-center text-center">
       <Badge> Pilihan Menu Kami </Badge>
       <h2 class="text-5xl leading-16">

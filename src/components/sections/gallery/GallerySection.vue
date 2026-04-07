@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col">
+  <section id="galeri" class="flex flex-col px-20">
     <div class="flex flex-col justify-center w-full items-center gap-7 mb-16!">
       <Badge> Galeri Gardoe77 </Badge>
       <h2 class="text-5xl">Vibes Kedai Kami</h2>
