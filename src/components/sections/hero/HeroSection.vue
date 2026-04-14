@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar.vue'
 </script>
 
 <template>
-  <section class="relative h-screen min-h-175 overflow-hidden">
+  <section class="relative flex flex-col h-screen min-h-175 overflow-hidden">
     <!-- Background Image -->
 
     <img
@@ -16,7 +16,7 @@ import Navbar from '@/components/Navbar.vue'
       class="absolute inset-0 h-full w-full object-cover object-[70%_8%]"
     />
 
-    <div
+    <!-- <div
       class="border absolute right-120 bottom-94 border-white/10 bg-white/28 rounded-xl text-lg! px-5 py-3 font-normal"
     >
       Kopi temani perjalanan
@@ -25,17 +25,18 @@ import Navbar from '@/components/Navbar.vue'
       class="border absolute right-28 top-108 border-white/10 bg-white/28 rounded-xl text-lg! px-5 py-3 font-normal"
     >
       Suasana Hangat Vintage
-    </div>
+    </div> -->
 
     <Navbar />
 
     <!-- Content Wrapper -->
-    <div class="relative flex h-full items-center ps-20 justify-start">
+    <div class="relative flex h-full grow items-center ps-20 justify-start">
       <!-- Hero Main Content -->
       <div class="flex flex-col gap-11.25 min-w-114.25">
         <Badge>Singgah, Ngopi, Bercerita</Badge>
         <h1 class="text-8xl! text-white! leading-[120%] text-center">
-          GARDOE <span class="pb-14 font-bold!">77</span> <br />
+          GARDOE <span class="align-text-top! inline-block font-bold! -translate-y-3">77</span>
+          <br />
           <span class="pe-4 font-bold!">PAKISADJI</span>
         </h1>
         <div class="flex gap-4">

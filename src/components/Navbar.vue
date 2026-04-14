@@ -1,38 +1,37 @@
 <template>
-  <div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-9/10">
-    <div
-      class="flex items-center justify-between px-6 rounded-lg bg-white/20 backdrop-blur-md border border-white/10 shadow-lg"
-    >
-      <!-- Logo -->
-      <img :src="gardoe77" class="text-white font-semibold" />
+  <div
+    class="flex items-center justify-between mx-auto mt-8 px-6 rounded-lg w-9/10 bg-white/20 backdrop-blur-md border border-white/10 shadow-lg"
+  >
+    <!-- Logo -->
+    <img :src="gardoe77" class="text-white font-semibold" />
 
-      <!-- NavigationMenu -->
-      <NavigationMenu>
-        <NavigationMenuList class="flex gap-8">
-          <NavigationMenuItem v-for="item in navItems" :key="item.id">
-            <NavigationMenuLink as-child>
-              <Button
-                variant="ghost"
-                @click="scrollTo(item.id)"
-                :class="[
-                  'text-sm transition',
-                  activeSection === item.id
-                    ? 'text-orange-400 bg-transparent'
-                    : 'text-white/70 hover:text-white',
-                ]"
-              >
-                {{ item.label }}
-              </Button>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+    <!-- NavigationMenu -->
+    <NavigationMenu>
+      <NavigationMenuList class="flex gap-8">
+        <NavigationMenuItem v-for="item in navItems" :key="item.id">
+          <NavigationMenuLink as-child>
+            <Button
+              variant="ghost"
+              @click="scrollTo(item.id)"
+              :class="[
+                'text-sm transition',
+                activeSection === item.id
+                  ? 'text-orange-400 bg-transparent'
+                  : 'text-white/70 hover:text-white',
+              ]"
+            >
+              {{ item.label }}
+            </Button>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
 
-      <!-- Right -->
-      <Button variant="ghost" @click="scrollTo('contact')" class="text-white hover:text-orange-400">
-        Kontak <ArrowUpRight />
-      </Button>
-    </div>
+    <!-- Right -->
+    <Button variant="ghost" @click="scrollTo('contact')" class="text-white hover:text-orange-400">
+      Kontak
+      <ArrowUpRight color="currentColor" stroke="currentColor" class="text-orange-400!" />
+    </Button>
   </div>
 </template>
 

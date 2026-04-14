@@ -16,11 +16,11 @@
         :key="`${item.name}-${index}`"
         class="p-4! bg-white/20 border-0 shrink-0 rounded-2xl min-w-73"
       >
-        <CardHeader class="relative w-full p-0">
+        <CardHeader class="relative w-full p-0 h-[217px] max-h-[217px]">
           <img :src="item.image" :alt="item.name" class="object-cover w-full" draggable="false" />
         </CardHeader>
-        <CardContent class="space-y-2 p-0">
-          <div class="flex items-start">
+        <CardContent class="p-0!">
+          <div class="flex items-start gap-0 p-0! m-0!">
             <p class="text-xl! text-primary! font-medium! border-b border-white/50 flex-1 grow">
               {{ item.name }}
             </p>
@@ -28,7 +28,7 @@
               {{ item.price }}
             </p>
           </div>
-          <p class="text-accent text-sm! font-light leading-relaxed">
+          <p class="text-accent text-sm! font-light leading-tight! mt-1! pt-1! m-0! mb-1!">
             {{ item.contents }}
           </p>
         </CardContent>

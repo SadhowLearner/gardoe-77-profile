@@ -18,5 +18,4 @@
 <script setup lang="ts">
 import Badge from '@/components/Badge.vue'
 import MenubarCoffee from './MenubarCoffee.vue'
-import MenuList from './MenuList.vue'
 </script>

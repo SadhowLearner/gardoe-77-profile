@@ -98,7 +98,7 @@ const menu = [
   },
   {
     image: tahuTelor,
-    name: 'Tahu Telor Pop Gardoe',
+    name: 'Tahu Telor Gardoe',
     contents: 'Tahu telor + nasi + bumbu + krupuk',
     price: '15.50',
   },

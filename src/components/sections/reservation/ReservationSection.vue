@@ -21,36 +21,41 @@
             <FieldLabel for="name">
               <h4 class="font-medium!">Nama :</h4>
             </FieldLabel>
-            <Input id="name" class="mt-2.25" />
+            <Input id="name" class="mt-2.25" v-model="form.name" />
           </Field>
           <Field>
             <FieldLabel for="telp">
               <h4 class="font-medium!">Nomor Whatsapp :</h4>
             </FieldLabel>
-            <Input id="telp" />
+            <Input id="telp" v-model="form.telp" />
           </Field>
         </div>
         <Field>
           <FieldLabel for="reservation-date">
             <h4 class="font-medium!">Tanggal Reservasi Acara :</h4>
           </FieldLabel>
-          <Input id="reservation-date" />
+          <Input id="reservation-date" v-model="form.date" />
         </Field>
         <Field>
           <FieldLabel for="number-of-people">
             <h4 class="font-medium!">Jumlah Orang :</h4>
           </FieldLabel>
-          <Input id="number-of-people" />
+          <Input id="number-of-people" v-model="form.people" />
         </Field>
         <Field>
           <FieldLabel for="notes">
             <h4 class="font-medium!">Catatan / Keperluan :</h4>
           </FieldLabel>
-          <Input id="notes" placeholder="(Nongkrong, Meeting, Gathering, Ulang Tahun, dll)" />
+          <Input
+            id="notes"
+            placeholder="(Nongkrong, Meeting, Gathering, Ulang Tahun, dll)"
+            v-model="form.notes"
+          />
         </Field>
         <div class="flex gap-4">
-          <img :src="whatsapp" alt="" class="size-14 bg-foreground px-2 py-1 rounded-xl" />
-          <img :src="gofood" alt="" class="bg-foreground px-2 py-1 rounded-xl" />
+          <Button as-child variant="default" class="bg-white/20"
+            ><a class="text-white" :href="waLink"> Kirim </a></Button
+          >
         </div>
       </FieldGroup>
       <FAQ />
@@ -61,10 +66,31 @@
 <script setup lang="ts">
 import Badge from '@/components/Badge.vue'
 import FAQ from './FAQ.vue'
-import whatsapp from '@/assets/images/icons/whatsapp.svg'
-import gofood from '@/assets/images/icons/gofood.png'
 import { Field, FieldGroup, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
+import { reactive, computed } from 'vue'
+
+const form = reactive({
+  name: '',
+  telp: '',
+  date: '',
+  people: '',
+  notes: '',
+})
+
+const waLink = computed(() => {
+  const message = `Halo, saya ingin reservasi:
+
+Nama: ${form.name}
+No WA: ${form.telp}
+Tanggal: ${form.date}
+Jumlah Orang: ${form.people}
+Catatan: ${form.notes}`
+
+  return `https://wa.me/6285700816852?text=${encodeURIComponent(message)}`
+})
 </script>
 
 <style scoped></style>

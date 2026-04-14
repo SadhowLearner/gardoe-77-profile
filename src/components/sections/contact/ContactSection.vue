@@ -17,6 +17,8 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Badge from '@/components/Badge.vue'
+</script>
 
 <style scoped></style>

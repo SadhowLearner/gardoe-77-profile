@@ -3,9 +3,9 @@
     <div class="flex flex-col justify-center w-full items-center gap-7 mb-16! px-20">
       <Badge> Apa Kata Mereka </Badge>
       <h2 class="text-5xl">Gardoe & Pelanggan</h2>
-      <h4>
-        Lihat kesan dan cerita dari pelanggan yang pernah berkunjung. Nikmati suasana hangat dan
-        menu favorit di Gardoe77 Pakisadji.
+      <h4 class="text-center">
+        Lihat kesan dan cerita dari pelanggan yang pernah berkunjung. <br />
+        Nikmati suasana hangat dan menu favorit di Gardoe77 Pakisadji.
       </h4>
     </div>
     <TestimonialCards :testimoni="testimonials" />
@@ -23,6 +23,7 @@ import img5 from '@/assets/images/profiles/5.png'
 import img6 from '@/assets/images/profiles/6.png'
 import rating4 from '@/assets/images/icons/rating4.svg'
 import rating3 from '@/assets/images/icons/rating3.svg'
+import Badge from '@/components/Badge.vue'
 
 const testimonials = [
   {

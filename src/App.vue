@@ -17,11 +17,13 @@ import FooterSection from './components/sections/footer/FooterSection.vue'
 </script>
 
 <template>
-  <main class="flex flex-col gap-45 pb-22.5">
+  <main class="flex flex-col gap-44.5 pb-22.5">
     <HeroSection />
     <ProfileSection />
-    <FeaturedMenuSection />
-    <FavoriteMenuSection />
+    <div class="flex flex-col gap-y-32">
+      <FeaturedMenuSection />
+      <FavoriteMenuSection />
+    </div>
     <ReservationSection />
     <GallerySection />
     <TestimonialsSection />

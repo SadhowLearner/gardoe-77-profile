@@ -1,8 +1,6 @@
 <template>
   <Tabs default-value="cold-coffee" class="w-242 mt-10">
-    <TabsList
-      class="flex flex-wrap mx-auto w-180.25 justify-center rounded-2xl gap-1.75 bg-accent h-auto"
-    >
+    <TabsList class="flex flex-wrap mx-auto w-180.25 justify-center rounded-2xl gap-1.75 bg-accent h-auto">
       <TabsTrigger value="cold-coffee">
         <h4>Cold Coffee</h4>
       </TabsTrigger>
@@ -26,45 +24,35 @@
         <h4>Snack</h4>
       </TabsTrigger>
     </TabsList>
-    <TabsContent
-      value="cold-coffee"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25"
-    >
+    <TabsContent value="cold-coffee"
+      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25">
       <MenuList :menu="menuItem1" class="col-span-1" />
       <img :src="menu1" alt="kopi hitam" class="col-span-1" />
       <img :src="menu2" alt="" class="col-span-1" />
       <MenuList :menu="menuItem2" class="col-span-1" />
     </TabsContent>
-    <TabsContent
-      value="basic-coffee"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25"
-    >
+    <TabsContent value="basic-coffee"
+      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25">
       <MenuList :menu="menuItem3" class="col-span-1" />
       <img :src="menu3" alt="kopi hitam" class="col-span-1" />
       <img :src="menu4" alt="" class="col-span-1" />
       <MenuList :menu="menuItem4" class="col-span-1" />
     </TabsContent>
-    <TabsContent
-      value="hot-drinks"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25"
-    >
+    <TabsContent value="hot-drinks"
+      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25">
       <MenuList :menu="menuItem5" class="col-span-1" />
-      <img :src="menu3" alt="kopi hitam" class="col-span-1" />
+      <img :src="wedang" alt="kopi hitam" class="col-span-1" />
       <img :src="milk" alt="" class="col-span-1" />
       <MenuList :menu="menuItem6" class="col-span-1" />
     </TabsContent>
-    <TabsContent
-      value="cold-drinks"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25"
-    >
+    <TabsContent value="cold-drinks"
+      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25">
       <MenuList :menu="menuItem7" class="col-span-1 row-span-2" />
       <img :src="menu5" alt="kopi hitam" class="col-span-1" />
       <MenuList :menu="menuItem8" class="col-span-1" />
     </TabsContent>
-    <TabsContent
-      value="heavy-food"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25"
-    >
+    <TabsContent value="heavy-food"
+      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25">
       <MenuList :menu="menuItem9" class="col-span-1" />
       <img :src="menu6" alt="kopi hitam" class="col-span-1" />
       <img :src="menu7" alt="kopi hitam" class="col-span-1" />
@@ -96,31 +84,32 @@ import menu7 from '@/assets/images/menu/menu7.png'
 import menu8 from '@/assets/images/menu/menu8.png'
 import menu9 from '@/assets/images/menu/menu9.png'
 import milk from '@/assets/images/menu/milk.png'
+import wedang from '@/assets/images/menu/wedang.png'
 
 const menuItem1 = [
   {
-    name: 'STMJ Jumbo Gardoe',
-    contents: 'Susu + telor + madu + jahe',
-    price: '18.50',
+    name: 'Americano',
+    contents: 'Biji arabika + biji robusta',
+    price: '17.00',
   },
   {
-    name: 'Wedang Jahe Kayu Manis',
+    name: 'V60',
     contents: 'Biji arabica',
-    price: '9.50',
+    price: '17.50',
   },
   {
-    name: 'Teh Kayu Manis',
-    contents: 'Teh + gula + kayu manis',
-    price: '7.00',
+    name: 'Sweet Italian',
+    contents: 'Kopi + susu',
+    price: '18.00',
   },
   {
-    name: 'Susu Jahe Kayu Manis',
-    contents: 'Jahe + kayu manis + susu + gula',
-    price: '12.50',
+    name: 'Es Kopi',
+    contents: 'Sirup tiramisu + susu + kopi',
+    price: '16.00',
   },
   {
-    name: 'Susu Coklat',
-    contents: 'Bubuk susu coklat + susu',
+    name: 'Es Kopi Gadoe',
+    contents: 'Sirup caramel + susu + kopi',
     price: '15.50',
   },
 ]
@@ -203,7 +192,7 @@ const menuItem4 = [
     price: '17.00',
   },
   {
-    name: 'Cappucino Gardoe77',
+    name: 'Cappucino Gardoe 77',
     contents: 'Espresso + susu',
     price: '18.00',
   },
