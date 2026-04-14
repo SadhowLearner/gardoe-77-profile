@@ -1,10 +1,10 @@
 <template>
   <section id="pemesanan" class="px-8 md:px-16 lg:px-20">
-    <div class="w-full flex flex-col gap-4 md:gap-6 items-center md:items-start">
+    <div class="w-full flex flex-col gap-4 md:gap-6 items-center lg:items-start">
       <Badge>Pemesanan</Badge>
 
       <div
-        class="w-full text-center md:text-justify flex flex-col lg:flex-row items-center lg:items-end justify-between gap-6 lg:gap-x-20"
+        class="w-full text-center lg:text-justify flex flex-col lg:flex-row items-center lg:items-end justify-between gap-6 lg:gap-x-20"
       >
         <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight md:leading-[1.2] font-semibold">
           Reservasi Mudah, <br class="hidden sm:block" />
