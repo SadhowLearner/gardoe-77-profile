@@ -1,11 +1,11 @@
 <template>
   <div class="col-span-5 lg:col-span-2 gap-9 flex flex-col">
     <div>
-      <h3 class="text-[30px] leading-[140%]! pb-2">
-        Pertanyaan Camper <br />
+      <h3 class="text-[30px] leading-[140%]! pb-2 text-center md:text-start">
+        Pertanyaan Camper <br class="hidden md:block" />
         yang Sering Diajukan!
       </h3>
-      <h4 class="font-light!">Informasi cepat sebelum kamu ketempat!</h4>
+      <h4 class="font-light! text-center md:text-start">Informasi cepat sebelum kamu ketempat!</h4>
     </div>
     <Accordion type="multiple" collapsible class="">
       <AccordionItem

@@ -6,12 +6,14 @@ import Badge from '@/components/Badge.vue'
 import Navbar from '@/components/Navbar.vue'
 </script>
 <template>
-  <section class="relative flex flex-col h-[60dvh] lg:min-h-screen overflow-hidden">
+  <section
+    class="relative flex flex-col h-dvh lg:min-h-screen overflow-hidden px-4 sm:px-8 md:px-16 lg:px-20"
+  >
     <!-- Background -->
     <img
       :src="hero"
       alt="Kedai Kopi Gardoe 77"
-      class="absolute inset-0 w-full h-full object-cover object-[65%_20%] md:object-[70%_8%]"
+      class="absolute inset-0 w-full h-full object-cover object-[65%_45%] md:object-[70%_8%]"
     />
 
     <!-- Overlay (biar text kebaca di mobile) -->
@@ -20,7 +22,7 @@ import Navbar from '@/components/Navbar.vue'
     <Navbar />
 
     <!-- Content -->
-    <div class="relative flex flex-1 items-start pt-24 md:pt-32 px-4 sm:px-8 md:px-16 lg:px-20">
+    <div class="relative flex flex-1 items-end md:items-start pt-24 md:pt-32">
       <div class="flex flex-col gap-6 md:gap-10 max-w-xl lg:max-w-2xl">
         <Badge>Singgah, Ngopi, Bercerita</Badge>
 

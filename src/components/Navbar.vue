@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mx-auto mt-4 w-[95%] sm:w-[90%] lg:w-[85%] flex items-center justify-between px-4 sm:px-6 py-3 rounded-xl bg-white/20 backdrop-blur-md border border-white/10 shadow-lg"
+    class="mx-auto mt-8 w-[95%] sm:w-[90%] lg:w-[85%] flex items-center justify-between px-4 sm:px-6 py-3 rounded-xl bg-white/20 backdrop-blur-md border border-white/10 shadow-lg"
   >
     <!-- Logo -->
     <img :src="gardoe77" class="h-8 sm:h-10" />

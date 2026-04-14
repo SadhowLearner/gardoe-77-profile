@@ -1,7 +1,7 @@
 <template>
   <section>
     <div
-      class="flex flex-col items-center text-center gap-4 md:gap-6 px-4 sm:px-8 md:px-12 lg:px-20 mb-10 md:mb-16"
+      class="flex flex-col items-center text-center gap-4 md:gap-6 px-8 md:px-12 lg:px-20 mb-8 md:mb-10"
     >
       <Badge>Apa Kata Mereka</Badge>
 

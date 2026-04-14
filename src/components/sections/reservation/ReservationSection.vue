@@ -19,7 +19,7 @@
     </div>
 
     <div
-      class="grid grid-cols-5 gap-14 bg-[#F9F8F5]/20 rounded-2xl md:rounded-[34px] w-full mt-15 py-15 px-13"
+      class="grid grid-cols-5 gap-14 bg-[#F9F8F5]/20 rounded-2xl md:rounded-[34px] w-full mt-15 py-8 md:py-15 px-7 md:px-13"
     >
       <FieldGroup class="col-span-5 gap-y-12.5 lg:col-span-3 w-full h-full">
         <div class="flex flex-col md:flex-row gap-y-12.5 gap-x-20">

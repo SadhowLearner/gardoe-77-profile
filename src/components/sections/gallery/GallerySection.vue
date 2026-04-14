@@ -1,9 +1,15 @@
 <template>
   <section id="galeri" class="flex flex-col px-8 md:px-16 lg:px-20">
-    <div class="flex flex-col justify-center w-full items-center gap-7 mb-16!">
-      <Badge> Galeri Gardoe77 </Badge>
-      <h2 class="text-5xl">Vibes Kedai Kami</h2>
-      <h4>Intip suasana yang hangat dan klasik yang menanti anda</h4>
+    <div
+      class="flex flex-col items-center text-center gap-4 md:gap-6 mb-10 md:mb-16 px-4 sm:px-8 md:px-12 lg:px-20"
+    >
+      <Badge>Galeri Gardoe77</Badge>
+
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold">Vibes Kedai Kami</h2>
+
+      <h4 class="text-sm sm:text-base md:text-lg max-w-xl leading-relaxed">
+        Intip suasana yang hangat dan klasik yang menanti anda
+      </h4>
     </div>
     <div
       class="grid gap-4 md:gap-5 transition-all duration-700 ease-in-out grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[200px] md:auto-rows-[250px]"

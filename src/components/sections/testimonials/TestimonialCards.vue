@@ -19,31 +19,46 @@
           >
             <!-- Icon Quote -->
             <img
-              class="absolute left-1/2 top-0 -translate-x-1/2 translate-y-5 z-20"
+              class="absolute left-1/2 top-0 -translate-x-1/2 translate-y-5 z-20 w-6 sm:w-7 md:w-auto"
               :src="testimoni"
               alt="Quote"
             />
 
             <!-- CARD -->
             <Card
-              class="p-13! h-full py-16 w-153.75 bg-[#FDFDFD] border-0 rounded-2xl min-w-152.75"
+              class="w-[260px] sm:w-[320px] md:w-[420px] lg:w-[615px] min-w-[260px] sm:min-w-[320px] md:min-w-[420px] lg:min-w-[615px] h-[339px] p-6 sm:p-8 md:p-10 lg:p-12 py-8 sm:py-12 md:py-14 lg:py-16 h-full bg-[#FDFDFD] border-0 rounded-2xl"
             >
-              <CardHeader class="w-full p-0">
-                <h4 class="font-normal! text-lg! text-[#522705]! text-center">
+              <CardContent class="flex flex-col items-center h-full p-0 gap-6 md:gap-8">
+                <!-- Rating -->
+                <h4
+                  class="font-normal! text-sm! sm:text-base! md:text-lg! playfair-display text-[#522705]! text-center flex-1"
+                >
                   {{ item.testimoni }}
                 </h4>
-              </CardHeader>
+                <img
+                  :src="item.rating ?? rating"
+                  alt="Rating"
+                  class="w-20 sm:w-24 md:w-auto mx-auto"
+                />
 
-              <CardContent class="flex flex-col items-center p-0 gap-8">
-                <img :src="item.rating ?? rating" alt="Rating" />
+                <!-- Profile -->
+                <div class="flex items-center gap-3 sm:gap-4 mt-auto">
+                  <img
+                    :src="item.profile"
+                    :alt="item.name"
+                    class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+                  />
 
-                <div class="flex gap-4">
-                  <img :src="item.profile" :alt="item.name" class="w-14 h-13.5" />
                   <div>
-                    <h5 class="work-sans! text-lg font-semibold! text-[#522705]!">
+                    <h5
+                      class="work-sans text-sm! sm:text-base! md:text-lg! font-semibold! leading-none text-[#522705]!"
+                    >
                       {{ item.name }}
                     </h5>
-                    <p class="work-sans! text-base! font-light! text-[#522705]!">
+
+                    <p
+                      class="work-sans text-xs! sm:text-sm! md:text-base! font-light text-[#522705]!"
+                    >
                       {{ item.title }}
                     </p>
                   </div>
