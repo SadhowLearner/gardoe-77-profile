@@ -4,11 +4,42 @@ import cust from '@/assets/images/sections/customer.png'
 import rate from '@/assets/images/icons/rating.svg'
 import Badge from '@/components/Badge.vue'
 import Navbar from '@/components/Navbar.vue'
+import wa from '@/assets/images/icons/wa-hero.svg'
+import gofood from '@/assets/images/icons/gofood.svg'
 </script>
 <template>
   <section
     class="relative flex flex-col h-dvh lg:min-h-screen overflow-hidden px-4 sm:px-8 md:px-16 lg:px-20"
   >
+    <div class="fixed bottom-10 right-16 flex flex-col items-end gap-8 z-50">
+      <!-- Gojek-->
+      <a
+        href="https://gofood.co.id/malang/restaurant/kedai-kopi-gardoe77-5f7f9abf-e18a-4861-88db-2f8f73e1ca3d?ot=eyJtZXJjaGFudF9pZCI6IjFmY2UwYzMwLWNhYjItNDg0YS05ZGVmLWNiMDJkNDMxODllYSIsInVzZXJfaWQiOiIwIiwiZXhwaXJ5X3RpbWVfZXBvY2giOjE3MzY1ODQ5MjgsImRlbGl2ZXJ5X3ByaWNlIjo0MDAwLCJwYXJraW5nX2ZlZSI6MCwiZXRhX2J1ZmZlcl9taW5zIjo3LCJjdXN0b21lcl9sb2NhdGlvbiI6Ii02LjE4MjMxMywxMDYuODM2NDY0NiJ9.cl36bNO3JKyiggk%2F4zn0Iylm5tfOCq6bxTgqYWxPqaQ%3D"
+        class="group flex overflow-visible items-center justify-start w-12 hover:w-52 h-12 rounded-full bg-[#EE2737] transition-all duration-300 shadow-lg"
+      >
+        <img :src="gofood" class="w-16 h-16 flex items-center justify-center shrink-0" />
+
+        <span
+          class="opacity-0 group-hover:opacity-100 ml-2 whitespace-nowrap text-white text-sm font-extrabold! w- transition-all duration-300"
+        >
+          Gofood Gardoe77
+        </span>
+      </a>
+
+      <!-- WhatsApp -->
+      <a
+        href="https://wa.me/6285700816852"
+        class="group flex items-center justify-start w-12 hover:w-52 h-12 rounded-full bg-[#25D366] transition-all duration-300 overflow-visible shadow-lg"
+      >
+        <img :src="wa" class="w-16 h-16 flex items-center justify-center shrink-0" />
+
+        <span
+          class="opacity-0 group-hover:opacity-100 ml-2 whitespace-nowrap text-white text-sm font-extrabold! transition-all duration-300"
+        >
+          WhatsApp Gardoe
+        </span>
+      </a>
+    </div>
     <!-- Background -->
     <img
       :src="hero"

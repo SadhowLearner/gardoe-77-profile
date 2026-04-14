@@ -16,8 +16,10 @@
     <!-- Content -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-x-16 items-center">
       <!-- Text -->
-      <div class="flex flex-col justify-between gap-6 md:gap-8 h-full max-w-xl">
-        <div class="text-left">
+      <div
+        class="flex flex-col order-2 lg:order-1 justify-between gap-6 md:gap-8 h-full max-w-xl mx-auto"
+      >
+        <div class="text-center lg:text-left">
           <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-3 md:mb-5">
             Tempat Nongkrong yang Kamu Cari
           </h3>

@@ -3,10 +3,13 @@
     class="bg-white/20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-4 sm:gap-6 px-2 sm:px-4 md:px-8 lg:px-20 py-4 sm:py-6"
   >
     <!-- Social -->
-    <div class="col-span-1 flex items-center justify-center gap-2.5">
+    <a
+      href="https://www.instagram.com/gardoe77?igsh=MXh0Y29hOGJodTg5Zw=="
+      class="col-span-1 flex items-center justify-center gap-2.5"
+    >
       <img :src="instagram" alt="instagram" class="w-5 h-5 sm:w-6 sm:h-6" />
       <p class="text-sm sm:text-base md:text-lg lg:text-[24px]">@Gardoe77</p>
-    </div>
+    </a>
 
     <div class="col-span-1 flex items-center justify-center gap-2.5">
       <img :src="facebook" alt="facebook" class="w-5 h-5 sm:w-6 sm:h-6" />
