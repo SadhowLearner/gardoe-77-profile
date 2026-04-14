@@ -1,13 +1,13 @@
 <template>
-  <section id="galeri" class="flex flex-col px-20">
+  <section id="galeri" class="flex flex-col px-8 md:px-16 lg:px-20">
     <div class="flex flex-col justify-center w-full items-center gap-7 mb-16!">
       <Badge> Galeri Gardoe77 </Badge>
       <h2 class="text-5xl">Vibes Kedai Kami</h2>
       <h4>Intip suasana yang hangat dan klasik yang menanti anda</h4>
     </div>
     <div
-      class="grid grid-cols-3 gap-5 transition-all duration-700 ease-in-out"
-      :class="isExpanded ? 'grid-rows-6' : 'grid-rows-2 h-137.5'"
+      class="grid gap-4 md:gap-5 transition-all duration-700 ease-in-out grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[200px] md:auto-rows-[250px]"
+      :class="isExpanded ? '' : 'max-h-125 overflow-hidden'"
     >
       <!-- Baris pertama (selalu tampil) -->
       <img :src="img1" class="w-full h-full object-cover rounded-xl" />

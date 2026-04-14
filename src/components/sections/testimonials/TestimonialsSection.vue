@@ -1,10 +1,14 @@
 <template>
   <section>
-    <div class="flex flex-col justify-center w-full items-center gap-7 mb-16! px-20">
-      <Badge> Apa Kata Mereka </Badge>
-      <h2 class="text-5xl">Gardoe & Pelanggan</h2>
-      <h4 class="text-center">
-        Lihat kesan dan cerita dari pelanggan yang pernah berkunjung. <br />
+    <div
+      class="flex flex-col items-center text-center gap-4 md:gap-6 px-4 sm:px-8 md:px-12 lg:px-20 mb-10 md:mb-16"
+    >
+      <Badge>Apa Kata Mereka</Badge>
+
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold">Gardoe & Pelanggan</h2>
+
+      <h4 class="text-sm sm:text-base md:text-lg max-w-xl md:max-w-2xl leading-relaxed">
+        Lihat kesan dan cerita dari pelanggan yang pernah berkunjung. <br class="hidden sm:block" />
         Nikmati suasana hangat dan menu favorit di Gardoe77 Pakisadji.
       </h4>
     </div>

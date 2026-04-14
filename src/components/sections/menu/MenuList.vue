@@ -1,8 +1,16 @@
 <template>
-  <ul class="w-109 flex flex-col gap-3" :class="props.class">
+  <ul
+    class="w-full! max-w-[580px] lg:max-w-[520px] flex flex-col gap-3 items-center"
+    :class="props.class"
+  >
     <li v-for="item in menu" class="w-full text-start">
-      <h5 class="-mb-3">{{ item.name }} <span v-if="name77.includes(item.name)"
-          class="inline-block -translate-y-[3px]! text-primary">77</span>
+      <h5 class="-mb-3">
+        {{ item.name }}
+        <span
+          v-if="name77.includes(item.name)"
+          class="inline-block -translate-y-[3px]! text-primary"
+          >77</span
+        >
       </h5>
       <div class="flex max-w-full w-full justify-start items-baseline gap-2">
         <p class="min-w-max w-max text-base!">{{ item.contents }}</p>

@@ -18,8 +18,10 @@ import FooterSection from './components/sections/footer/FooterSection.vue'
 
 <template>
   <main class="flex flex-col gap-44.5 pb-22.5">
-    <HeroSection />
-    <ProfileSection />
+    <div class="flex flex-col gap-y-24">
+      <HeroSection />
+      <ProfileSection />
+    </div>
     <div class="flex flex-col gap-y-32">
       <FeaturedMenuSection />
       <FavoriteMenuSection />

@@ -1,6 +1,8 @@
 <template>
-  <Tabs default-value="cold-coffee" class="w-242 mt-10">
-    <TabsList class="flex flex-wrap mx-auto w-180.25 justify-center rounded-2xl gap-1.75 bg-accent h-auto">
+  <Tabs default-value="cold-coffee" class="w-full lg:w-260 mt-10">
+    <TabsList
+      class="flex flex-nowrap h-auto pl-5 items-center justify-start md:justify-center gap-2 px-3 py-2 w-full md:max-w-fit mx-auto overflow-x-auto scrollbar-none bg-accent rounded-2xl"
+    >
       <TabsTrigger value="cold-coffee">
         <h4>Cold Coffee</h4>
       </TabsTrigger>
@@ -24,52 +26,100 @@
         <h4>Snack</h4>
       </TabsTrigger>
     </TabsList>
-    <TabsContent value="cold-coffee"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25">
-      <MenuList :menu="menuItem1" class="col-span-1" />
-      <img :src="menu1" alt="kopi hitam" class="col-span-1" />
-      <img :src="menu2" alt="" class="col-span-1" />
-      <MenuList :menu="menuItem2" class="col-span-1" />
+    <!-- COLD COFFEE -->
+    <TabsContent value="cold-coffee" class="menu-grid">
+      <MenuList :menu="menuItem1" class="order-2 lg:order-1" />
+      <div class="menu-img-wrapper mt-6 order-1"><img :src="menu1" class="menu-img-inner" /></div>
+
+      <div class="menu-img-wrapper order-3"><img :src="menu2" class="menu-img-inner" /></div>
+      <MenuList :menu="menuItem2" class="order-4" />
     </TabsContent>
-    <TabsContent value="basic-coffee"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25">
-      <MenuList :menu="menuItem3" class="col-span-1" />
-      <img :src="menu3" alt="kopi hitam" class="col-span-1" />
-      <img :src="menu4" alt="" class="col-span-1" />
-      <MenuList :menu="menuItem4" class="col-span-1" />
-    </TabsContent>
-    <TabsContent value="hot-drinks"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25">
-      <MenuList :menu="menuItem5" class="col-span-1" />
-      <img :src="wedang" alt="kopi hitam" class="col-span-1" />
-      <img :src="milk" alt="" class="col-span-1" />
-      <MenuList :menu="menuItem6" class="col-span-1" />
-    </TabsContent>
-    <TabsContent value="cold-drinks"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25">
-      <MenuList :menu="menuItem7" class="col-span-1 row-span-2" />
-      <img :src="menu5" alt="kopi hitam" class="col-span-1" />
-      <MenuList :menu="menuItem8" class="col-span-1" />
-    </TabsContent>
-    <TabsContent value="heavy-food"
-      class="grid grid-cols-1 md:grid-cols-2 mt-15 grid-rows-2 place-items-center gap-y-8.25">
-      <MenuList :menu="menuItem9" class="col-span-1" />
-      <img :src="menu6" alt="kopi hitam" class="col-span-1" />
-      <img :src="menu7" alt="kopi hitam" class="col-span-1" />
-      <MenuList :menu="menuItem10" class="col-span-1" />
-    </TabsContent>
-    <TabsContent value="snack" class="grid grid-cols-1 md:grid-cols-2 mt-15 place-content-center">
-      <div class="col-span-1 flex flex-col items-center gap-9">
-        <MenuList :menu="menuItem11" />
-        <img :src="menu9" alt="kopi hitam" />
+
+    <!-- BASIC COFFEE -->
+    <TabsContent value="basic-coffee" class="menu-grid">
+      <MenuList :menu="menuItem3" class="order-2 lg:order-1" />
+      <div class="menu-img-wrapper mt-6 order-1">
+        <img :src="menu3" class="menu-img-inner scale-100!" />
       </div>
-      <div class="col-span-1 flex flex-col items-center gap-9">
-        <img :src="menu8" alt="kopi hitam" />
+
+      <div class="menu-img-wrapper order-3"><img :src="menu4" class="menu-img-inner" /></div>
+      <MenuList :menu="menuItem4" class="order-4" />
+    </TabsContent>
+
+    <!-- HOT DRINK -->
+    <TabsContent value="hot-drinks" class="menu-grid">
+      <MenuList :menu="menuItem5" class="order-2 lg:order-1" />
+      <div class="menu-img-wrapper order-1">
+        <img :src="wedang" class="menu-inner-img scale-125!" />
+      </div>
+
+      <div class="menu-img-wrapper order-3"><img :src="milk" class="menu-img-inner" /></div>
+      <MenuList :menu="menuItem6" class="order-4" />
+    </TabsContent>
+
+    <!-- COLD DRINK -->
+    <TabsContent value="cold-drinks" class="menu-grid">
+      <MenuList :menu="menuItem7" class="order-2 lg:order-1" />
+      <div class="menu-col order-1">
+        <div class="menu-img-wrapper mt-6"><img :src="menu5" class="menu-img-inner" /></div>
+        <MenuList :menu="menuItem8" class="" />
+      </div>
+    </TabsContent>
+
+    <!-- HEAVY FOOD -->
+    <TabsContent value="heavy-food" class="menu-grid">
+      <div class="menu-col flex-col-reverse! lg:flex-col! order-2 lg:order-1">
+        <MenuList :menu="menuItem9" />
+        <div class="menu-img-wrapper mt-6"><img :src="menu6" class="menu-img-inner" /></div>
+      </div>
+
+      <div class="menu-col order-1">
+        <div class="menu-img-wrapper"><img :src="menu7" class="menu-img-inner" /></div>
+        <MenuList :menu="menuItem10" />
+      </div>
+    </TabsContent>
+
+    <!-- SNACK (SPECIAL LAYOUT) -->
+    <TabsContent value="snack" class="menu-grid">
+      <div class="menu-col flex-col-reverse! lg:flex-col! order-2 lg:order-1">
+        <MenuList :menu="menuItem11" />
+        <div class="menu-img-wrapper"><img :src="menu9" class="menu-img-inner" /></div>
+      </div>
+
+      <div class="menu-col order-1">
+        <div class="menu-img-wrapper translate-y-4 mb-2">
+          <img :src="menu8" class="menu-img-inner" />
+        </div>
         <MenuList :menu="menuItem12" />
       </div>
     </TabsContent>
   </Tabs>
 </template>
+
+<style scoped>
+@reference '@/assets/main.css';
+.menu-grid {
+  @apply grid 
+         grid-cols-1 
+         lg:grid-cols-[minmax(0,520px)_minmax(0,520px)]
+         justify-center
+         gap-8 md:gap-12 
+         mt-10 md:mt-14 
+         items-center! justify-items-center;
+}
+
+.menu-img-wrapper {
+  @apply w-full max-w-[520px] overflow-hidden rounded-xl;
+}
+
+.menu-img-inner {
+  @apply w-full h-full object-cover scale-110;
+}
+
+.menu-col {
+  @apply flex flex-col w-full justify-between! items-center h-full gap-12 lg:gap-8;
+}
+</style>
 
 <script setup lang="ts">
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'

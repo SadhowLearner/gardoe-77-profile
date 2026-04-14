@@ -1,14 +1,22 @@
 <template>
-  <section class="px-20">
-    <Badge> Menu Favorit </Badge>
-    <h2 class="text-5xl mt-5 leading-16">
-      Menu Andalan <br />
-      yang Paling Disukai
-    </h2>
-    <h4 class="mt-5 leading-8 mb-15.5">
-      Berbagai hidangan dan minuman favorit yang menghadirkan rasa nikmat untuk menemani waktu
-      bersantai.
-    </h4>
+  <section class="px-8 md:px-16 lg:px-20">
+    <div class="px-4 sm:px-8 md:px-12 lg:px-0 text-center lg:text-left">
+      <Badge>Menu Favorit</Badge>
+
+      <h2
+        class="text-3xl sm:text-4xl md:text-5xl mt-4 md:mt-5 leading-tight md:leading-[1.2] font-semibold"
+      >
+        Menu Andalan <br />
+        yang Paling Disukai
+      </h2>
+
+      <h4
+        class="text-sm md:ms-0 sm:text-base md:text-lg mt-4 md:mt-5 mb-10 md:mb-15 max-w-full leading-relaxed"
+      >
+        Berbagai hidangan dan minuman favorit yang menghadirkan rasa nikmat untuk menemani waktu
+        bersantai.
+      </h4>
+    </div>
     <CardMenu :menu="menu" />
   </section>
 </template>

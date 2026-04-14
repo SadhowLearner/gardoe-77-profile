@@ -1,5 +1,5 @@
 <template>
-  <div class="col-span-5 md:col-span-2 gap-9 flex flex-col">
+  <div class="col-span-5 lg:col-span-2 gap-9 flex flex-col">
     <div>
       <h3 class="text-[30px] leading-[140%]! pb-2">
         Pertanyaan Camper <br />

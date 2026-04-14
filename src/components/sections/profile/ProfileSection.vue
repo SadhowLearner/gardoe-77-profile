@@ -1,34 +1,52 @@
 <template>
-  <section id="profil" class="my-24 px-20">
-    <div class="flex flex-col justify-center w-full items-center gap-7 mb-16!">
-      <Badge> Profil Kami </Badge>
-      <h2 class="text-5xl">Lebih Dari Sekedar Kedai kopi</h2>
-      <h4>
+  <section id="profil" class="px-8 md:px-16 lg:px-20">
+    <!-- Header -->
+    <div
+      class="flex flex-col items-center text-center gap-4 md:gap-6 mb-10 md:mb-16 px-4 sm:px-8 md:px-12 lg:px-20"
+    >
+      <Badge>Profil Kami</Badge>
+
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold">Lebih Dari Sekedar Kedai kopi</h2>
+
+      <h4 class="text-sm sm:text-base md:text-lg max-w-xl leading-[180%]">
         Bukan sekadar tempat ngopi, tapi ruang untuk cerita, tawa, dan momen yang ingin diulang.
       </h4>
     </div>
-    <div class="grid grid-cols-2 gap-x-15">
-      <div class="flex flex-col justify-end mt-auto gap-y-17.5 col-span-1 w-138.25 h-83.25">
-        <div>
-          <h3 class="text-3xl mb-6.75">Tempat Nongkrong yang Kamu Cari</h3>
-          <p class="text-lg leading-[180%]! mb-2">
+
+    <!-- Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-16 items-center">
+      <!-- Text -->
+      <div class="flex flex-col gap-10 order-2 lg:order-1">
+        <div class="text-justify! lg:text-left!">
+          <h3 class="text-xl md:text-2xl lg:text-3xl mb-4 md:mb-6">
+            Tempat Nongkrong yang Kamu Cari
+          </h3>
+
+          <p class="text-sm md:text-base leading-relaxed mb-3">
             Gardoe77 Pakisadji hadir sebagai ruang hangat untuk kamu yang ingin melepas penat,
             berbagi cerita, atau sekadar menikmati waktu sendiri. Dengan suasana nyaman bernuansa
             vintage, pemandangan kereta api yang melintas, tempat ini menawarkan pengalaman
             nongkrong yang berbeda, unik, dan penuh cerita.
           </p>
-          <p class="text-lg leading-[180%]!">
+
+          <p class="text-sm md:text-base leading-relaxed">
             Secangkir kopi bukan hanya minuman, tapi teman setia untuk menikmati setiap momen,
             termasuk saat melihat perjalanan kereta yang berlalu dengan suasana menenangkan.
           </p>
         </div>
+
         <StatsHighlight />
       </div>
-      <div class="col-span-1">
-        <img :src="profileImg" alt="" class="w-154 h-139" />
+
+      <!-- Image -->
+      <div class="w-full order-1 lg:order-2">
+        <img :src="profileImg" alt="Profil" class="w-full h-auto object-cover rounded-lg" />
       </div>
     </div>
-    <FacilityHighlight />
+
+    <div class="mt-16">
+      <FacilityHighlight />
+    </div>
   </section>
 </template>
 
@@ -38,5 +56,3 @@ import StatsHighlight from './StatsHighlight.vue'
 import FacilityHighlight from './FacilityHighlight.vue'
 import Badge from '@/components/Badge.vue'
 </script>
-
-<style scoped></style>
